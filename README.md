@@ -11,7 +11,7 @@ Technologies Used
 
 How to Run this application
 
-First change the src/main/resources/application.properties with your postgreSQL instance properties.
+First change the **src/main/resources/application.properties** with your postgreSQL instance properties.
 
 Then,
 
