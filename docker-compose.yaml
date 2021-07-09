@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  api_service:
+    build: .
+    image: amineelouaer/spring
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres_db
+  postgres_db:
+    image: "postgres:11.4"
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: spring_postgres_test
+      POSTGRES_PASSWORD: admin123
