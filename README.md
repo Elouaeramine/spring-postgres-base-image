@@ -30,7 +30,3 @@ Then start the JAR file using java
 ```shell
 $ java -jar build/libs/spring-boot-postgresql-base-project-0.0.1-SNAPSHOT.jar
 ```
-
-### Related Articles
-
-- [Docker Compose For Spring Boot with PostgreSQL](https://javatodev.com/docker-compose-spring-boot-postgresql/)
