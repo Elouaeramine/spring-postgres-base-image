@@ -2,7 +2,7 @@ FROM gradle:jdk10 as builder
 
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
-RUN rm ./checksums/*.lock
+RUN rm -rf ./checksums/*.lock
 RUN gradle run --info
 
 FROM openjdk:8-jdk-alpine
