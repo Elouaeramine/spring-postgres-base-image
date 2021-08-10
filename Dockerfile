@@ -1,3 +1,9 @@
+FROM gradle:jdk10 as builder
+
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build
+
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="elouaeramine266@hotmail.com"
 VOLUME /main-app
