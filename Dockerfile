@@ -7,6 +7,7 @@ RUN gradle build --info
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="elouaeramine266@hotmail.com"
 EXPOSE 8080
+RUN ls -l /home/gradle/src
 COPY --from=builder /home/gradle/src/spring-boot-postgresql-base-project/build/distributions/spring-boot-postgresql-base-project.tar /app/
 WORKDIR /app
 RUN tar -xvf spring-boot-postgresql-base-project.tar
