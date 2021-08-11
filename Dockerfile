@@ -1,15 +1,13 @@
-FROM gradle:jdk8 as builder
+FROM gradle:4.7.0-jdk8-alpine as builder
 
-COPY --chown=gradle:gradle . /home/gradle
-WORKDIR /home/gradle
-RUN gradle build --info
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build --info --no-daeomn
 
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="elouaeramine266@hotmail.com"
 EXPOSE 8080
-RUN ls -l /home/gradle/src
-COPY --from=builder /home/gradle/src/spring-boot-postgresql-base-project/build/distributions/spring-boot-postgresql-base-project.tar /app/
-WORKDIR /app
-RUN tar -xvf spring-boot-postgresql-base-project.tar
-WORKDIR /app/spring-boot-postgresql-base-project
-CMD bin/spring-boot-postgresql-base-project
+RUN mkdir /app
+COPY --from=builder /home/gradle/src/build/libs/*.jar /app/spring-boot-application.jar
+ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-Djava.security.egd=file:/dev/./urandom","-jar","/app/spring-boot-application.jar"]
+
