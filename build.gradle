@@ -8,7 +8,7 @@ plugins {
 group = 'com.javatodev'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-javaModule.name='baseimage'
+javaModule.name='spring-boot-postgresql-base-project'
 
 configurations {
     compileOnly {
