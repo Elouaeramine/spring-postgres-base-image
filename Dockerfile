@@ -1,4 +1,4 @@
-FROM gradle:4.7.0-jdk8-alpine as builder
+FROM gradle:jdk8 as builder
 
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
