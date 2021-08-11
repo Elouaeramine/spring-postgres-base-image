@@ -1,7 +1,7 @@
 FROM gradle:jdk8 as builder
 
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
+COPY --chown=gradle:gradle . /home/gradle
+WORKDIR /home/gradle
 RUN gradle build --info
 
 FROM openjdk:8-jdk-alpine
