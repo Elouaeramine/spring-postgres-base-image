@@ -37,7 +37,7 @@ WORKDIR $HOTBOX
 COPY --from=GENERATE_FAT_FILE /root/dev/app/build/libs/* .
 
 #copy wiremock contracts (this is specific to my app)
-COPY contracts $HOTBOX/app
+# COPY contracts $HOTBOX/app
 
 EXPOSE 8080
 
