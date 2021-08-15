@@ -11,7 +11,7 @@ RUN mkdir -p $APP_HOME/src
 WORKDIR $APP_HOME
 
 #copy required files to build final executable Jar
-COPY build.gradle settings.gradle gradle.properties gradlew gradlew.bat $APP_HOME
+COPY build.gradle settings.gradle gradlew gradlew.bat $APP_HOME
 
 #copy gradle wrapper
 COPY gradle $APP_HOME/gradle
