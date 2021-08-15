@@ -13,8 +13,8 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public List<Product> readProducts () {
-        return productRepository.findAll();
         System.out.println("Successfully reached find all method");
+        return productRepository.findAll();
     }
 
 }
