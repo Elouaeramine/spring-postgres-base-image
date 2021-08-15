@@ -1,0 +1,10 @@
+com/javatodev/api/SpringBootPostgresqlBaseProjectApplication.java
+ com.javatodev.api.SpringBootPostgresqlBaseProjectApplication
+com/javatodev/api/repository/ProductRepository.java
+ com.javatodev.api.repository.ProductRepository
+com/javatodev/api/service/ProductService.java
+ com.javatodev.api.service.ProductService
+com/javatodev/api/model/Product.java
+ com.javatodev.api.model.Product
+com/javatodev/api/controller/ProductController.java
+ com.javatodev.api.controller.ProductController

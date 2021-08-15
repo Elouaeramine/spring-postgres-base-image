@@ -1,0 +1,2 @@
+com/javatodev/api/SpringBootPostgresqlBaseProjectApplicationTests.java
+ com.javatodev.api.SpringBootPostgresqlBaseProjectApplicationTests

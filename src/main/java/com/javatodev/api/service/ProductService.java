@@ -14,6 +14,7 @@ public class ProductService {
 
     public List<Product> readProducts () {
         return productRepository.findAll();
+        System.out.println("Successfully reached find all method")
     }
 
 }
