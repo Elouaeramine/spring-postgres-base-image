@@ -43,4 +43,4 @@ EXPOSE 8080
 
 #since root folder have one FAT JAR , make sure the final jar name
 # java -jar *.jar working inside image but not outside need to debug
-CMD ["java","-jar","spring-boot-application.jar"]
+CMD ["java","-jar","spring-boot-postgresql-base-project-0.0.1-SNAPSHOT.jar"]
