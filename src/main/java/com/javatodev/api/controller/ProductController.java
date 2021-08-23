@@ -17,8 +17,11 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping
+    @GetMapping(produces = MediaType.TEXT_HTML_VALUE)
     public ResponseEntity<List<Product>> readProducts () {
-        return ResponseEntity.ok(productService.readProducts());
+        
+        String html = "<html>\n" + "<header><title>Welcome</title></header>\n" +
+          "<body>\n" + "Hello world\n"+ productService.readProducts() + "</body>\n" + "</html>";
+        return html;
     }
 }
