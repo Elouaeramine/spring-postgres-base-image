@@ -17,7 +17,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping(produces = MediaType.TEXT_HTML_VALUE)
+    @GetMapping()
     public ResponseEntity<List<Product>> readProducts () {
         
         String html = "<html>\n" + "<header><title>Welcome</title></header>\n" +
