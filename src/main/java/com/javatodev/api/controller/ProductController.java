@@ -18,7 +18,7 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping()
-    public ResponseEntity<List<Product>> readProducts () {
+    public ResponseEntity<String> readProducts () {
         
         String html = "<html>\n" + "<header><title>Welcome</title></header>\n" +
           "<body>\n" + "Hello world\n"+ productService.readProducts() + "</body>\n" + "</html>";
