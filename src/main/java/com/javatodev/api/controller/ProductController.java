@@ -22,6 +22,6 @@ public class ProductController {
         
         String html = "<html>\n" + "<header><title>Welcome</title></header>\n" +
           "<body>\n" + "Hello world\n"+ productService.readProducts() + "</body>\n" + "</html>";
-        return html;
+        return ResponseEntity.ok(html);
     }
 }
