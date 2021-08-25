@@ -21,7 +21,7 @@ public class ProductController {
     public ResponseEntity<String> readProducts () {
         
         String html = "<html>\n" + "<header><title>Welcome</title></header>\n" +
-          "<body>\n" + "Hello world\n"+ productService.readProducts() + "</body>\n" + "</html>";
+          "<body>\n" + "Hello From 3S\n"+ productService.readProducts() + "</body>\n" + "</html>";
         return ResponseEntity.ok(html);
     }
 }
